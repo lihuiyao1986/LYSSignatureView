@@ -25,6 +25,12 @@
 #pragma mark - 线条颜色
 @property(nonatomic,strong)UIColor *lineColor;
 
+#pragma mark - 提示文字字体
+@property(nonatomic,strong)UIFont *placeholderFont;
+
+#pragma mark - 提示文字的颜色
+@property(nonatomic,strong)UIColor *placeholderTextColor;
+
 #pragma mark - 获取签名图片
 - (UIImage *)getImage;
 

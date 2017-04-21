@@ -29,6 +29,7 @@
     [self.view addSubview:self.clearBtn];
     [self.view addSubview:self.getImageBtn];
     [self.view addSubview:self.imageView];
+    self.signatureView.placeholderFont = [UIFont systemFontOfSize:18];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

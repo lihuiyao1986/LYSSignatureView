@@ -38,11 +38,10 @@
 -(UILabel*)placeHolderView{
     if (!_placeHolderView) {
         _placeHolderView = [UILabel new];
-        _placeHolderView.font = [UIFont fontWithName:@"HelveticaNeue" size:51];
+        _placeHolderView.font = self.placeholderFont;
         _placeHolderView.text = self.placeHolder;
-        _placeHolderView.textColor = [UIColor lightGrayColor];
+        _placeHolderView.textColor = self.placeholderTextColor;
         _placeHolderView.textAlignment = NSTextAlignmentCenter;
-        _placeHolderView.alpha = 0.3;
     }
     return _placeHolderView;
 }
@@ -61,6 +60,21 @@
     return  _beizerPath;
 }
 
+-(void)setPlaceHolder:(NSString *)placeHolder{
+    _placeHolder = placeHolder;
+    self.placeHolderView.text = self.placeHolder;
+}
+
+-(void)setPlaceholderTextColor:(UIColor *)placeholderTextColor{
+    _placeholderTextColor = placeholderTextColor;
+    self.placeHolderView.textColor = self.placeholderTextColor;
+}
+
+-(void)setPlaceholderFont:(UIFont *)placeholderFont{
+    _placeholderFont = placeholderFont;
+    self.placeHolderView.font = self.placeholderFont;
+}
+
 #pragma mark - 初始化
 -(void)initConfig{
     self.backgroundColor = [UIColor whiteColor];
@@ -76,6 +90,8 @@
     _placeholderVH = 60.f;
     _lineW = 3.f;
     _lineBorderColor = _lineColor = [UIColor redColor];
+    _placeholderFont = [UIFont fontWithName:@"HelveticaNeue" size:51];
+    _placeholderTextColor = [UIColor lightGrayColor];
     
 }
 
